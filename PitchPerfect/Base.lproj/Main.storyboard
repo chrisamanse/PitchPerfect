@@ -20,6 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwV-fX-eyW">
                                 <state key="normal" image="Record"/>
+                                <connections>
+                                    <action selector="didPressRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7kA-uv-sFN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

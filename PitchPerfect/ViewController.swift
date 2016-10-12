@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func didPressRecordButton(_ sender: UIButton) {
+        print("Record button pressed")
+    }
 }
-
