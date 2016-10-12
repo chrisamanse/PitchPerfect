@@ -24,11 +24,23 @@
                                     <action selector="didPressRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7kA-uv-sFN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkD-He-3HS">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGp-xu-l80">
+                                <state key="normal" title="Stop Recording"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XkD-He-3HS" firstAttribute="centerX" secondItem="cwV-fX-eyW" secondAttribute="centerX" id="67e-Oo-eMf"/>
+                            <constraint firstItem="XkD-He-3HS" firstAttribute="top" secondItem="cwV-fX-eyW" secondAttribute="bottom" constant="8" symbolic="YES" id="L3u-qT-IJj"/>
                             <constraint firstItem="cwV-fX-eyW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LtN-0A-ft5"/>
+                            <constraint firstItem="rGp-xu-l80" firstAttribute="centerX" secondItem="cwV-fX-eyW" secondAttribute="centerX" id="dV9-WI-9XV"/>
                             <constraint firstItem="cwV-fX-eyW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mWG-Jf-KLZ"/>
+                            <constraint firstItem="rGp-xu-l80" firstAttribute="top" secondItem="XkD-He-3HS" secondAttribute="bottom" constant="8" symbolic="YES" id="yJT-23-zTf"/>
                         </constraints>
                     </view>
                 </viewController>
