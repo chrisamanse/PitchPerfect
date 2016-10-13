@@ -14,6 +14,7 @@
 		DFA4947F1DAE06B6006BC7DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA4947D1DAE06B6006BC7DC /* LaunchScreen.storyboard */; };
 		DFA4948A1DAE06B6006BC7DC /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA494891DAE06B6006BC7DC /* PitchPerfectTests.swift */; };
 		DFA494951DAE06B6006BC7DC /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA494941DAE06B6006BC7DC /* PitchPerfectUITests.swift */; };
+		DFFD0F281DAF69B6003168BA /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD0F271DAF69B6003168BA /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DFA494901DAE06B6006BC7DC /* PitchPerfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPerfectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA494941DAE06B6006BC7DC /* PitchPerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectUITests.swift; sourceTree = "<group>"; };
 		DFA494961DAE06B6006BC7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFD0F271DAF69B6003168BA /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				DFA494741DAE06B6006BC7DC /* AppDelegate.swift */,
 				DFA494761DAE06B6006BC7DC /* RecordViewController.swift */,
+				DFFD0F271DAF69B6003168BA /* PlayViewController.swift */,
 				DFA494781DAE06B6006BC7DC /* Main.storyboard */,
 				DFA4947B1DAE06B6006BC7DC /* Assets.xcassets */,
 				DFA4947D1DAE06B6006BC7DC /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFA494771DAE06B6006BC7DC /* RecordViewController.swift in Sources */,
+				DFFD0F281DAF69B6003168BA /* PlayViewController.swift in Sources */,
 				DFA494751DAE06B6006BC7DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
