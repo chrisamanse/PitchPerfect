@@ -48,6 +48,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         
         do {
             try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try session.overrideOutputAudioPort(.speaker)
             
             let audioRecorder = try AVAudioRecorder(url: fileURL, settings: [:])
             
