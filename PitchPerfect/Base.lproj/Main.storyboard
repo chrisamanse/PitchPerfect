@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="870" y="139"/>
         </scene>
-        <!--Play View Controller-->
+        <!--Play-->
         <scene sceneID="28n-wK-UGo">
             <objects>
                 <viewController id="Yb9-J2-9Jl" customClass="PlayViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -148,6 +148,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Utx-qX-V85" secondAttribute="trailing" id="wux-Z2-UdC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Play" id="Pxt-xi-GBW"/>
                     <connections>
                         <outlet property="chipmunkButton" destination="Yc9-8r-axU" id="S0h-WR-s9D"/>
                         <outlet property="echoButton" destination="C9v-tn-uQZ" id="0pf-Jq-f7G"/>
@@ -167,7 +168,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ndj-mG-C2q" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wb8-4u-6qQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wb8-4u-6qQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.0" green="0.006641868968" blue="0.103658475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
