@@ -29,6 +29,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Hide navigation bar and set status bar color to white
+        
         navigationController?.navigationBar.isHidden = true
         
         UIApplication.shared.statusBarStyle = .lightContent
@@ -36,6 +38,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        // Show navigation bar and set status bar color to default
         
         navigationController?.navigationBar.isHidden = false
         
@@ -83,6 +87,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func didPressStopRecordingButton(_ sender: UIButton) {
         print("Stop recording pressed")
+        
+        // Update UI
         
         recordingLabel.text = "Tap to Record"
         

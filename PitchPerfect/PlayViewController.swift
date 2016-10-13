@@ -59,6 +59,8 @@ class PlayViewController: UIViewController {
             return
         }
         
+        // Play sound depending on pressed button
+        
         switch buttonType {
         case .slow:
             playSound(rate: 0.5)
