@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordViewController: UIViewController {
+class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -53,6 +53,7 @@ class RecordViewController: UIViewController {
             
             self.audioRecorder = audioRecorder
             
+            audioRecorder.delegate = self
             audioRecorder.isMeteringEnabled = true
             audioRecorder.prepareToRecord()
             audioRecorder.record()
@@ -78,5 +79,9 @@ class RecordViewController: UIViewController {
         } catch let error {
             print("Failed to set audio session to inactive: \(error)")
         }
+    }
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        print("Recording finished!")
     }
 }
