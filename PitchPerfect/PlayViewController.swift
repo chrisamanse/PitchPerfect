@@ -43,10 +43,6 @@ class PlayViewController: UIViewController {
         stopAudio()
     }
     
-    deinit {
-        stopAudio()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
