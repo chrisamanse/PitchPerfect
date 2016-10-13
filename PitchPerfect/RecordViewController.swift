@@ -30,12 +30,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = true
+        
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         navigationController?.navigationBar.isHidden = false
+        
+        UIApplication.shared.statusBarStyle = .default
     }
     
     override func didReceiveMemoryWarning() {
