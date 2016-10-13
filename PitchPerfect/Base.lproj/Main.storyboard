@@ -76,7 +76,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Utx-qX-V85">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Utx-qX-V85">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="alZ-Zy-IBT">
                                         <subviews>
@@ -130,23 +130,47 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvf-zr-Znw">
-                                        <state key="normal" image="Stop"/>
-                                        <connections>
-                                            <action selector="stopButtonPressed:" destination="Yb9-J2-9Jl" eventType="touchUpInside" id="a8n-6h-oHf"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvf-zr-Znw">
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="Yb9-J2-9Jl" eventType="touchUpInside" id="a8n-6h-oHf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.006641868968" blue="0.103658475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Qvf-zr-Znw" firstAttribute="leading" secondItem="Utx-qX-V85" secondAttribute="trailing" constant="20" id="5C8-05-M5x"/>
                             <constraint firstItem="Utx-qX-V85" firstAttribute="top" secondItem="us4-2w-ofN" secondAttribute="bottom" id="8ch-we-2U0"/>
+                            <constraint firstItem="E8B-sg-FFK" firstAttribute="top" secondItem="Utx-qX-V85" secondAttribute="bottom" id="9xS-S3-l4B"/>
                             <constraint firstItem="Utx-qX-V85" firstAttribute="leading" secondItem="GCn-uU-bmp" secondAttribute="leadingMargin" id="BUd-tF-rix"/>
-                            <constraint firstItem="E8B-sg-FFK" firstAttribute="top" secondItem="Utx-qX-V85" secondAttribute="bottom" id="tEj-gR-dXY"/>
+                            <constraint firstItem="Qvf-zr-Znw" firstAttribute="top" secondItem="Utx-qX-V85" secondAttribute="bottom" constant="20" id="Joe-cD-GVf"/>
+                            <constraint firstItem="Qvf-zr-Znw" firstAttribute="top" secondItem="us4-2w-ofN" secondAttribute="bottom" id="dr1-o9-qz5"/>
+                            <constraint firstItem="Qvf-zr-Znw" firstAttribute="leading" secondItem="GCn-uU-bmp" secondAttribute="leadingMargin" id="exH-I2-OsQ"/>
+                            <constraint firstItem="E8B-sg-FFK" firstAttribute="top" secondItem="Qvf-zr-Znw" secondAttribute="bottom" constant="20" id="iCS-2t-Ffl">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Qvf-zr-Znw" firstAttribute="trailing" secondItem="GCn-uU-bmp" secondAttribute="trailingMargin" id="k4j-G8-Mt7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Utx-qX-V85" secondAttribute="trailing" id="wux-Z2-UdC"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9xS-S3-l4B"/>
+                                <exclude reference="5C8-05-M5x"/>
+                                <exclude reference="dr1-o9-qz5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="wux-Z2-UdC"/>
+                                <include reference="9xS-S3-l4B"/>
+                                <include reference="5C8-05-M5x"/>
+                                <exclude reference="Joe-cD-GVf"/>
+                                <include reference="dr1-o9-qz5"/>
+                                <exclude reference="exH-I2-OsQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Play" id="Pxt-xi-GBW"/>
                     <connections>
@@ -161,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqV-zU-Sxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="139"/>
+            <point key="canvasLocation" x="1644.8275862068967" y="138.40000000000001"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RFF-8U-Loc">
