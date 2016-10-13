@@ -88,6 +88,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
                 // Update UI in main thread if start recording failed
                 
                 DispatchQueue.main.async {
+                    self.showErrorAlert(title: "Error Recording", message: "Failed to start recording.")
+                    
                     self.configureUI(forState: .stoppedRecording)
                 }
             }
@@ -132,6 +134,14 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         stopRecordingButton.isEnabled = !enableRecordingButton
     }
     
+    func showErrorAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        present(alertController, animated: true)
+    }
+    
     // MARK: AVAudioRecorderDelegate
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -140,13 +150,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: recorder.url)
         } else {
-            // Show error alert
-            
-            let alertController = UIAlertController(title: "Error Recording", message: "Failed to save audio recording to file.", preferredStyle: .alert)
-            
-            alertController.addAction(UIAlertAction(title: "OK", style: .default))
-            
-            present(alertController, animated: true)
+            showErrorAlert(title: "Error Recording", message: "Failed to save audio recording to file.")
         }
     }
     
