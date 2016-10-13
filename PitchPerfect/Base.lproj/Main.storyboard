@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="870" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Play View Controller-->
         <scene sceneID="28n-wK-UGo">
             <objects>
-                <viewController id="Yb9-J2-9Jl" sceneMemberID="viewController">
+                <viewController id="Yb9-J2-9Jl" customClass="PlayViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="us4-2w-ofN"/>
                         <viewControllerLayoutGuide type="bottom" id="E8B-sg-FFK"/>
