@@ -32,7 +32,19 @@ class PlayViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         configureUI(forPlayState: .notPlaying)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        stopAudio()
+    }
+    
+    deinit {
+        stopAudio()
     }
     
     override func didReceiveMemoryWarning() {
