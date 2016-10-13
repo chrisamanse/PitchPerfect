@@ -67,20 +67,30 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         
         let session = AVAudioSession.sharedInstance()
         
-        do {
-            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try session.overrideOutputAudioPort(.speaker)
-            
-            let audioRecorder = try AVAudioRecorder(url: fileURL, settings: [:])
-            
-            self.audioRecorder = audioRecorder
-            
-            audioRecorder.delegate = self
-            audioRecorder.isMeteringEnabled = true
-            audioRecorder.prepareToRecord()
-            audioRecorder.record()
-        } catch let error {
-            print("Failed to record audio: \(error)")
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+                try session.overrideOutputAudioPort(.speaker)
+                
+                let audioRecorder = try AVAudioRecorder(url: fileURL, settings: [:])
+                
+                self.audioRecorder = audioRecorder
+                
+                audioRecorder.delegate = self
+                audioRecorder.isMeteringEnabled = true
+                audioRecorder.prepareToRecord()
+                audioRecorder.record()
+                
+                print("Successfully started recording")
+            } catch let error {
+                print("Failed to record audio: \(error)")
+                
+                // Update UI in main thread if start recording failed
+                
+                DispatchQueue.main.async {
+                    self.configureUI(forState: .stoppedRecording)
+                }
+            }
         }
     }
     
