@@ -64,6 +64,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         
         let session = AVAudioSession.sharedInstance()
         
+        // Send prepare recording process to background to prevent lag of UI
+        
         DispatchQueue.global(qos: .userInitiated).async {
             do {
                 try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
