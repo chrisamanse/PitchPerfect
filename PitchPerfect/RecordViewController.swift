@@ -20,10 +20,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.isHidden = true
-        
-        recordButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
+        configureUI(forState: .stoppedRecording)
     }
     
     override func viewWillAppear(_ animated: Bool) {
